@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded AI Club</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%; /* Ensure the body and html take up the full height */
+        }
+        .iframe-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        iframe {
+            position: absolute;
+            top: -100px; /* Adjust this value to move the iframe content vertically */
+            left: -50px; /* Adjust this value to move the iframe content horizontally */
+            width: 110vw; /* Make iframe wider than the viewport to maintain crop */
+            height: 120vh; /* Make iframe taller than the viewport to maintain crop */
+            border: none;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1000px) {
+            iframe {
+                top: -80px; /* Adjust cropping for smaller screens */
+                left: -40px;
+                width: 110vw;
+                height: 115vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                top: -60px;
+                left: -15px;
+                width: -110vw;
+                height: 110vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://thewilddoor.wixsite.com/the-ai-club" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
